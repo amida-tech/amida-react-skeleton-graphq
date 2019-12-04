@@ -1,5 +1,12 @@
 module.exports = {
   Query: {
-    rating: (parent, args, context, info) => ({ value: 70 })
+    rating: async (parent, args, context, info) => {
+      await new Promise(resolve => {
+        setTimeout(() => {
+          resolve();
+        }, 1000);
+      });
+      return { value: 70 };
+    }
   }
 };

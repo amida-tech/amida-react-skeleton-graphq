@@ -8,4 +8,47 @@
     align-items: center;
     justify-content: center;
   }
+
+  @include element("header-disabled") {
+    height: calc(100vh - #{$nav-height});
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+  }
+
+  @include element("button") {
+    font-size: large;
+    background-color: green;
+  }
+
+  @include element("button-disabled") {
+    font-size: large;
+    opacity: 0.5;
+    background-color: red;
+  }
+
+  &__login-notice {
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    // @extend .fadeIn;
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 0;
+    color: $PRIMARY_TOAST_TEXT_COLOR;
+    background-color: $PRIMARY_TOAST_BACKGROUND_COLOR;
+    box-shadow: 0 1px 3px rgba($PRIMARY_DISPLAY_TEXT_COLOR, 0.12),
+      0 1px 2px rgba($PRIMARY_DISPLAY_TEXT_COLOR, 0.24);
+    display: flex;
+    flex: 1;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: 10000;
+    @media (prefers-color-scheme: dark) {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+  }
 }
