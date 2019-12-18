@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   return (
@@ -6,8 +7,12 @@ const HomePage: React.FC = () => {
       <header className="home-page__header">
         <div>{"Amida React-GraphQL Skeleton"}</div>
         <div>{"Where would you like to go?"}</div>
+        <div>
+          <Link to={"/app/rating"}>
+            {"Go to Rating Page"}
+          </Link>
+        </div>
       </header>
-      <div>Click on the link menu to do something.</div>
     </div>
   );
 };

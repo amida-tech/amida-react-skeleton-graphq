@@ -36,9 +36,6 @@ const Nav: React.FC = () => {
           <Link to="/app/rating" onClick={() => setMenuOpen(false)}>
             {"Go to Rating Page"}
           </Link>
-          <Link to="/app/upload" onClick={() => setMenuOpen(false)}>
-            {"Go to Upload Page"}
-          </Link>
         </Menu>
       </nav>
       <div className="nav__spacer"></div>
