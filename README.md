@@ -40,3 +40,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Docker
+
+Build with `docker build -t amida-react-skeleton-graphql .`
+Run with standard command line `docker run -p 3000:80 -e REACT_APP_GRAPHQL_API_URL=http://localhost:4000/ amida-react-skeleton-graphql`, where REACT_APP_GRAPHQL_API_URL is the GraphQL endpoint.
